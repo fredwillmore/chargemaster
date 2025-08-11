@@ -1,11 +1,13 @@
 class CreateCharges < ActiveRecord::Migration[7.1]
   def change
-    create_table :charges do |t|
+    create_table :standard_charges do |t|
       t.belongs_to :hospital
-      t.string :description
-      t.string :hcpcs_code
-      t.string :charge_code
-      t.decimal :cost
+      t.string :setting
+      t.decimal :gross_charge
+      t.decimal :discounted_cash
+      t.decimal :minimum
+      t.decimal :maximum
+
       t.timestamps
     end
   end
