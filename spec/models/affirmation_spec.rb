@@ -11,7 +11,8 @@ describe Affirmation, type: :model do
     standard charge information in accordance with the requirements of 45 CFR 180.50,
     and the information encoded is true, accurate, and complete as of the date indicated.
   TEXT
+
   it { should allow_value(valid_text).for(:affirmation) }
   it { should_not allow_value("other text").for(:affirmation) }
-
+  it { should validate_presence_of :confirm_affirmation }
 end

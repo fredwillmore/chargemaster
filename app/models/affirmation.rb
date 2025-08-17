@@ -20,6 +20,7 @@ class Affirmation < ApplicationRecord
   # == Validations ==========================================================
 
   validates :affirmation, presence: true, format: { with: /\A#{VALID_TEXT}\z/, message: "must be #{VALID_TEXT}" }
+  validates :confirm_affirmation, presence: true
 
   # == Callbacks ============================================================
 
