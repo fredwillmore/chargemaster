@@ -17,6 +17,13 @@ class StandardChargesFileInformation < ApplicationRecord
 
   # == Validations ==========================================================
 
+  validates :hospital_name, presence: true
+  validates :last_updated_on, presence: true
+  validates :version, presence: true
+  validates :hospital_locations, presence: true
+  validates :license_information, presence: true
+  validates :affirmation, presence: true
+
   # == Callbacks ============================================================
 
   # == Scopes ===============================================================
