@@ -7,7 +7,6 @@ class StandardChargesFileInformation < ApplicationRecord
 
   # == Associations =========================================================
 
-  has_many :hospital_locations
   has_one :license_information, class_name: "HospitalLicensure"
   has_one :affirmation
   has_many :standard_charge_informations
@@ -20,9 +19,10 @@ class StandardChargesFileInformation < ApplicationRecord
   validates :hospital_name, presence: true
   validates :last_updated_on, presence: true
   validates :version, presence: true
-  validates :hospital_locations, presence: true
   validates :license_information, presence: true
   validates :affirmation, presence: true
+  validates :hospital_location, presence: true
+  validates :hospital_address, presence: true
 
   # == Callbacks ============================================================
 

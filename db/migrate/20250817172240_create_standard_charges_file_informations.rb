@@ -6,10 +6,8 @@ class CreateStandardChargesFileInformations < ActiveRecord::Migration[8.0]
       t.string :hospital_name
       t.date :last_updated_on
       t.string :version
-      # t.array :hospital_location
-      # t.array :hospital_address
-      # t.has_one :license_information
-      # t.has_one :affirmation
+      t.string :hospital_location, array: true, default: []
+      t.string :hospital_address, array: true, default: []
       
       t.timestamps
     end
